@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
+// import { Contract } from "ethers";
 
 /**
  * Deploys a contract named "YourContract" using the deployer account and
@@ -22,6 +22,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
+  // await hre.ethers.getContractAt("YourContract", "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789");
   await deploy("YourContract", {
     from: deployer,
     // Contract constructor arguments
@@ -32,9 +33,27 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
-  // Get the deployed contract to interact with it after deploying.
-  const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
-  console.log("👋 Initial greeting:", await yourContract.greeting());
+  await deploy("AccountFactory", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
+  await deploy("Paymaster", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
+  await deploy("EntryPoint", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
+  // // Get the deployed contract to interact with it after deploying.
+  // const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
+  // console.log("👋 Initial greeting:", await yourContract.greeting());
 };
 
 export default deployYourContract;

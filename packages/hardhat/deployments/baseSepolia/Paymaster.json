@@ -1,0 +1,167 @@
+{
+  "address": "0xb2A25a5245419Bbb39627374CaF23F1B7a4637Fc",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "enum IPaymaster.PostOpMode",
+          "name": "mode",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes",
+          "name": "context",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "actualGasCost",
+          "type": "uint256"
+        }
+      ],
+      "name": "postOp",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nonce",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "initCode",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "callGasLimit",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "verificationGasLimit",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "preVerificationGas",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxFeePerGas",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxPriorityFeePerGas",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "paymasterAndData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct UserOperation",
+          "name": "",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "validatePaymasterUserOp",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "context",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "validationData",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x1c51ff27138f1cc83775a310d63be7a37a0772464f4b906b6113df10b92a0226",
+  "receipt": {
+    "to": null,
+    "from": "0xd0983D7dA8e89fb292C41684408366cB78c2EA04",
+    "contractAddress": "0xb2A25a5245419Bbb39627374CaF23F1B7a4637Fc",
+    "transactionIndex": 5,
+    "gasUsed": "162905",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x979bae7b445812aeca3c7083a7ee6dfe678fa9105c20034250b8dae927626c19",
+    "transactionHash": "0x1c51ff27138f1cc83775a310d63be7a37a0772464f4b906b6113df10b92a0226",
+    "logs": [],
+    "blockNumber": 8176686,
+    "cumulativeGasUsed": "14713314",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "1c95a052bac3a06d83c2532e5e20f29a",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"enum IPaymaster.PostOpMode\",\"name\":\"mode\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"context\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"actualGasCost\",\"type\":\"uint256\"}],\"name\":\"postOp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"initCode\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"callGasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"verificationGasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"preVerificationGas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxFeePerGas\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxPriorityFeePerGas\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"paymasterAndData\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"internalType\":\"struct UserOperation\",\"name\":\"\",\"type\":\"tuple\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"validatePaymasterUserOp\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"context\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"validationData\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"postOp(uint8,bytes,uint256)\":{\"params\":{\"actualGasCost\":\"- actual gas used so far (without this postOp call).\",\"context\":\"- the context value returned by validatePaymasterUserOp\",\"mode\":\"enum with the following options:      opSucceeded - user operation succeeded.      opReverted  - user op reverted. still has to pay for gas.      postOpReverted - user op succeeded, but caused postOp (in mode=opSucceeded) to revert.                       Now this is the 2nd call, after user's op was deliberately reverted.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"postOp(uint8,bytes,uint256)\":{\"notice\":\"post-operation handler. Must verify sender is the entryPoint\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Paymaster.sol\":\"Paymaster\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1000},\"remappings\":[]},\"sources\":{\"@account-abstraction/contracts/core/Helpers.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\npragma solidity ^0.8.12;\\n\\n/* solhint-disable no-inline-assembly */\\n\\n/**\\n * returned data from validateUserOp.\\n * validateUserOp returns a uint256, with is created by `_packedValidationData` and parsed by `_parseValidationData`\\n * @param aggregator - address(0) - the account validated the signature by itself.\\n *              address(1) - the account failed to validate the signature.\\n *              otherwise - this is an address of a signature aggregator that must be used to validate the signature.\\n * @param validAfter - this UserOp is valid only after this timestamp.\\n * @param validaUntil - this UserOp is valid only up to this timestamp.\\n */\\n    struct ValidationData {\\n        address aggregator;\\n        uint48 validAfter;\\n        uint48 validUntil;\\n    }\\n\\n//extract sigFailed, validAfter, validUntil.\\n// also convert zero validUntil to type(uint48).max\\n    function _parseValidationData(uint validationData) pure returns (ValidationData memory data) {\\n        address aggregator = address(uint160(validationData));\\n        uint48 validUntil = uint48(validationData >> 160);\\n        if (validUntil == 0) {\\n            validUntil = type(uint48).max;\\n        }\\n        uint48 validAfter = uint48(validationData >> (48 + 160));\\n        return ValidationData(aggregator, validAfter, validUntil);\\n    }\\n\\n// intersect account and paymaster ranges.\\n    function _intersectTimeRange(uint256 validationData, uint256 paymasterValidationData) pure returns (ValidationData memory) {\\n        ValidationData memory accountValidationData = _parseValidationData(validationData);\\n        ValidationData memory pmValidationData = _parseValidationData(paymasterValidationData);\\n        address aggregator = accountValidationData.aggregator;\\n        if (aggregator == address(0)) {\\n            aggregator = pmValidationData.aggregator;\\n        }\\n        uint48 validAfter = accountValidationData.validAfter;\\n        uint48 validUntil = accountValidationData.validUntil;\\n        uint48 pmValidAfter = pmValidationData.validAfter;\\n        uint48 pmValidUntil = pmValidationData.validUntil;\\n\\n        if (validAfter < pmValidAfter) validAfter = pmValidAfter;\\n        if (validUntil > pmValidUntil) validUntil = pmValidUntil;\\n        return ValidationData(aggregator, validAfter, validUntil);\\n    }\\n\\n/**\\n * helper to pack the return value for validateUserOp\\n * @param data - the ValidationData to pack\\n */\\n    function _packValidationData(ValidationData memory data) pure returns (uint256) {\\n        return uint160(data.aggregator) | (uint256(data.validUntil) << 160) | (uint256(data.validAfter) << (160 + 48));\\n    }\\n\\n/**\\n * helper to pack the return value for validateUserOp, when not using an aggregator\\n * @param sigFailed - true for signature failure, false for success\\n * @param validUntil last timestamp this UserOperation is valid (or zero for infinite)\\n * @param validAfter first timestamp this UserOperation is valid\\n */\\n    function _packValidationData(bool sigFailed, uint48 validUntil, uint48 validAfter) pure returns (uint256) {\\n        return (sigFailed ? 1 : 0) | (uint256(validUntil) << 160) | (uint256(validAfter) << (160 + 48));\\n    }\\n\\n/**\\n * keccak function over calldata.\\n * @dev copy calldata into memory, do keccak and drop allocated memory. Strangely, this is more efficient than letting solidity do it.\\n */\\n    function calldataKeccak(bytes calldata data) pure returns (bytes32 ret) {\\n        assembly {\\n            let mem := mload(0x40)\\n            let len := data.length\\n            calldatacopy(mem, data.offset, len)\\n            ret := keccak256(mem, len)\\n        }\\n    }\\n\\n\",\"keccak256\":\"0x591c87519f7155d1909210276b77925ab2722a99b7b5d5649aecc36ebbdb045a\",\"license\":\"GPL-3.0\"},\"@account-abstraction/contracts/interfaces/IPaymaster.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\npragma solidity ^0.8.12;\\n\\nimport \\\"./UserOperation.sol\\\";\\n\\n/**\\n * the interface exposed by a paymaster contract, who agrees to pay the gas for user's operations.\\n * a paymaster must hold a stake to cover the required entrypoint stake and also the gas for the transaction.\\n */\\ninterface IPaymaster {\\n\\n    enum PostOpMode {\\n        opSucceeded, // user op succeeded\\n        opReverted, // user op reverted. still has to pay for gas.\\n        postOpReverted //user op succeeded, but caused postOp to revert. Now it's a 2nd call, after user's op was deliberately reverted.\\n    }\\n\\n    /**\\n     * payment validation: check if paymaster agrees to pay.\\n     * Must verify sender is the entryPoint.\\n     * Revert to reject this request.\\n     * Note that bundlers will reject this method if it changes the state, unless the paymaster is trusted (whitelisted)\\n     * The paymaster pre-pays using its deposit, and receive back a refund after the postOp method returns.\\n     * @param userOp the user operation\\n     * @param userOpHash hash of the user's request data.\\n     * @param maxCost the maximum cost of this transaction (based on maximum gas and gas price from userOp)\\n     * @return context value to send to a postOp\\n     *      zero length to signify postOp is not required.\\n     * @return validationData signature and time-range of this operation, encoded the same as the return value of validateUserOperation\\n     *      <20-byte> sigAuthorizer - 0 for valid signature, 1 to mark signature failure,\\n     *         otherwise, an address of an \\\"authorizer\\\" contract.\\n     *      <6-byte> validUntil - last timestamp this operation is valid. 0 for \\\"indefinite\\\"\\n     *      <6-byte> validAfter - first timestamp this operation is valid\\n     *      Note that the validation code cannot use block.timestamp (or block.number) directly.\\n     */\\n    function validatePaymasterUserOp(UserOperation calldata userOp, bytes32 userOpHash, uint256 maxCost)\\n    external returns (bytes memory context, uint256 validationData);\\n\\n    /**\\n     * post-operation handler.\\n     * Must verify sender is the entryPoint\\n     * @param mode enum with the following options:\\n     *      opSucceeded - user operation succeeded.\\n     *      opReverted  - user op reverted. still has to pay for gas.\\n     *      postOpReverted - user op succeeded, but caused postOp (in mode=opSucceeded) to revert.\\n     *                       Now this is the 2nd call, after user's op was deliberately reverted.\\n     * @param context - the context value returned by validatePaymasterUserOp\\n     * @param actualGasCost - actual gas used so far (without this postOp call).\\n     */\\n    function postOp(PostOpMode mode, bytes calldata context, uint256 actualGasCost) external;\\n}\\n\",\"keccak256\":\"0x36858ba8685024974f533530420688da3454d29996ebc42e410673a1ed2ec456\",\"license\":\"GPL-3.0\"},\"@account-abstraction/contracts/interfaces/UserOperation.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\npragma solidity ^0.8.12;\\n\\n/* solhint-disable no-inline-assembly */\\n\\nimport {calldataKeccak} from \\\"../core/Helpers.sol\\\";\\n\\n/**\\n * User Operation struct\\n * @param sender the sender account of this request.\\n     * @param nonce unique value the sender uses to verify it is not a replay.\\n     * @param initCode if set, the account contract will be created by this constructor/\\n     * @param callData the method call to execute on this account.\\n     * @param callGasLimit the gas limit passed to the callData method call.\\n     * @param verificationGasLimit gas used for validateUserOp and validatePaymasterUserOp.\\n     * @param preVerificationGas gas not calculated by the handleOps method, but added to the gas paid. Covers batch overhead.\\n     * @param maxFeePerGas same as EIP-1559 gas parameter.\\n     * @param maxPriorityFeePerGas same as EIP-1559 gas parameter.\\n     * @param paymasterAndData if set, this field holds the paymaster address and paymaster-specific data. the paymaster will pay for the transaction instead of the sender.\\n     * @param signature sender-verified signature over the entire request, the EntryPoint address and the chain ID.\\n     */\\n    struct UserOperation {\\n\\n        address sender;\\n        uint256 nonce;\\n        bytes initCode;\\n        bytes callData;\\n        uint256 callGasLimit;\\n        uint256 verificationGasLimit;\\n        uint256 preVerificationGas;\\n        uint256 maxFeePerGas;\\n        uint256 maxPriorityFeePerGas;\\n        bytes paymasterAndData;\\n        bytes signature;\\n    }\\n\\n/**\\n * Utility functions helpful when working with UserOperation structs.\\n */\\nlibrary UserOperationLib {\\n\\n    function getSender(UserOperation calldata userOp) internal pure returns (address) {\\n        address data;\\n        //read sender from userOp, which is first userOp member (saves 800 gas...)\\n        assembly {data := calldataload(userOp)}\\n        return address(uint160(data));\\n    }\\n\\n    //relayer/block builder might submit the TX with higher priorityFee, but the user should not\\n    // pay above what he signed for.\\n    function gasPrice(UserOperation calldata userOp) internal view returns (uint256) {\\n    unchecked {\\n        uint256 maxFeePerGas = userOp.maxFeePerGas;\\n        uint256 maxPriorityFeePerGas = userOp.maxPriorityFeePerGas;\\n        if (maxFeePerGas == maxPriorityFeePerGas) {\\n            //legacy mode (for networks that don't support basefee opcode)\\n            return maxFeePerGas;\\n        }\\n        return min(maxFeePerGas, maxPriorityFeePerGas + block.basefee);\\n    }\\n    }\\n\\n    function pack(UserOperation calldata userOp) internal pure returns (bytes memory ret) {\\n        address sender = getSender(userOp);\\n        uint256 nonce = userOp.nonce;\\n        bytes32 hashInitCode = calldataKeccak(userOp.initCode);\\n        bytes32 hashCallData = calldataKeccak(userOp.callData);\\n        uint256 callGasLimit = userOp.callGasLimit;\\n        uint256 verificationGasLimit = userOp.verificationGasLimit;\\n        uint256 preVerificationGas = userOp.preVerificationGas;\\n        uint256 maxFeePerGas = userOp.maxFeePerGas;\\n        uint256 maxPriorityFeePerGas = userOp.maxPriorityFeePerGas;\\n        bytes32 hashPaymasterAndData = calldataKeccak(userOp.paymasterAndData);\\n\\n        return abi.encode(\\n            sender, nonce,\\n            hashInitCode, hashCallData,\\n            callGasLimit, verificationGasLimit, preVerificationGas,\\n            maxFeePerGas, maxPriorityFeePerGas,\\n            hashPaymasterAndData\\n        );\\n    }\\n\\n    function hash(UserOperation calldata userOp) internal pure returns (bytes32) {\\n        return keccak256(pack(userOp));\\n    }\\n\\n    function min(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a < b ? a : b;\\n    }\\n}\\n\",\"keccak256\":\"0x61374003361059087fdcf17967a7bba052badeaf5c7f0ae689166f8aafd3a45c\",\"license\":\"GPL-3.0\"},\"contracts/Paymaster.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"@account-abstraction/contracts/interfaces/IPaymaster.sol\\\";\\n\\ncontract Paymaster is IPaymaster {\\n    \\n    function validatePaymasterUserOp(UserOperation calldata , bytes32 , uint256 ) pure\\n    external returns (bytes memory context, uint256 validationData) {\\n        context = new bytes(0);\\n        validationData = 0;\\n    }\\n\\n    /**\\n     * post-operation handler.\\n     * Must verify sender is the entryPoint\\n     * @param mode enum with the following options:\\n     *      opSucceeded - user operation succeeded.\\n     *      opReverted  - user op reverted. still has to pay for gas.\\n     *      postOpReverted - user op succeeded, but caused postOp (in mode=opSucceeded) to revert.\\n     *                       Now this is the 2nd call, after user's op was deliberately reverted.\\n     * @param context - the context value returned by validatePaymasterUserOp\\n     * @param actualGasCost - actual gas used so far (without this postOp call).\\n     */\\n    function postOp(PostOpMode mode, bytes calldata context, uint256 actualGasCost) external {\\n\\n    }\\n}\",\"keccak256\":\"0x9fc080d9c4f239fa33efe5f9734810d432c932ce47c452182456523f42328c2b\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101fc806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063a9a234091461003b578063f465c77e14610051575b600080fd5b61004f61004936600461008e565b50505050565b005b61007761005f36600461011d565b50506040805160008082526020820190925292909150565b604051610085929190610171565b60405180910390f35b600080600080606085870312156100a457600080fd5b8435600381106100b357600080fd5b9350602085013567ffffffffffffffff808211156100d057600080fd5b818701915087601f8301126100e457600080fd5b8135818111156100f357600080fd5b88602082850101111561010557600080fd5b95986020929092019750949560400135945092505050565b60008060006060848603121561013257600080fd5b833567ffffffffffffffff81111561014957600080fd5b8401610160818703121561015c57600080fd5b95602085013595506040909401359392505050565b604081526000835180604084015260005b8181101561019f5760208187018101516060868401015201610182565b506000606082850101526060601f19601f830116840101915050826020830152939250505056fea26469706673582212205d2349a6b1f055982d6c9acb9490c2e3b9c68131d6a7ee603b8203ec4221106564736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063a9a234091461003b578063f465c77e14610051575b600080fd5b61004f61004936600461008e565b50505050565b005b61007761005f36600461011d565b50506040805160008082526020820190925292909150565b604051610085929190610171565b60405180910390f35b600080600080606085870312156100a457600080fd5b8435600381106100b357600080fd5b9350602085013567ffffffffffffffff808211156100d057600080fd5b818701915087601f8301126100e457600080fd5b8135818111156100f357600080fd5b88602082850101111561010557600080fd5b95986020929092019750949560400135945092505050565b60008060006060848603121561013257600080fd5b833567ffffffffffffffff81111561014957600080fd5b8401610160818703121561015c57600080fd5b95602085013595506040909401359392505050565b604081526000835180604084015260005b8181101561019f5760208187018101516060868401015201610182565b506000606082850101526060601f19601f830116840101915050826020830152939250505056fea26469706673582212205d2349a6b1f055982d6c9acb9490c2e3b9c68131d6a7ee603b8203ec4221106564736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "postOp(uint8,bytes,uint256)": {
+        "params": {
+          "actualGasCost": "- actual gas used so far (without this postOp call).",
+          "context": "- the context value returned by validatePaymasterUserOp",
+          "mode": "enum with the following options:      opSucceeded - user operation succeeded.      opReverted  - user op reverted. still has to pay for gas.      postOpReverted - user op succeeded, but caused postOp (in mode=opSucceeded) to revert.                       Now this is the 2nd call, after user's op was deliberately reverted."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "postOp(uint8,bytes,uint256)": {
+        "notice": "post-operation handler. Must verify sender is the entryPoint"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
