@@ -26,11 +26,11 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
-        runs: 200,
+        runs: 1000,
       },
     },
   },
-  defaultNetwork: "localhost",
+  defaultNetwork: "baseSepolia",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -99,7 +99,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
     baseSepolia: {
-      url: "https://sepolia.base.org",
+      url: process.env.BASE_SEPOLIA_RPC_URL || "https://rpc.base.sepolia.org",
       accounts: [deployerPrivateKey],
     },
     scrollSepolia: {
