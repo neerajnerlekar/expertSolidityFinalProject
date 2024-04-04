@@ -1,35 +1,50 @@
-# 🏗 Scaffold-ETH 2
+# Account Abstraction with Solidity Smart Contracts
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+## Description
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+Ethereum account abstraction is a revolutionary paradigm shift aimed at significantly enhancing user experience within decentralized applications (DApps). By employing account abstraction, assets are managed directly by smart contracts, moving away from the traditional model of externally-owned accounts (EOAs). This approach is facilitated through the ERC-4337 standard, which introduces a new token standard for account abstraction, thereby enabling the creation of smart contract-based crypto wallets on the Ethereum blockchain.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+The concept of account abstraction simplifies the complexity involved in Web3 interactions, offering a seamless and more intuitive experience for users. This simplification is not just about improving wallet design; it's about transforming the entire user interaction with the Ethereum network. Recognized by Ethereum's co-founder, Vitalik Buterin, as a crucial development for Ethereum's future, account abstraction is poised to play a significant role in the platform's widespread adoption.
+[source](https://cointelegraph.com/learn/account-abstraction-guide-to-ethereums-erc-4337-standard)
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## Installation
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+To set up a development environment for exploring account abstraction with Solidity, you will need the following prerequisites installed on your machine:
 
-## Requirements
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, necessary for running the development environment and various dependencies.
+- **Yarn**: A fast, reliable, and secure dependency management system.
+- **Hardhat**: A development environment to compile, deploy, test, and debug your Ethereum software.
 
-Before you begin, you need to install the following tools:
+### Getting Started
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+1. **Install Node.js**
 
-## Quickstart
+   Ensure you have Node.js installed on your system. You can download it from [Node.js official website](https://nodejs.org/).
 
-To get started with Scaffold-ETH 2, follow the steps below:
+2. **Install Yarn**
 
-1. Clone this repo & install dependencies
+   After installing Node.js, install Yarn by running the following command in your terminal:
+
+```
+npm install -g yarn
+```
+
+
+3. **Set up Hardhat**
+
+Initialize a new Hardhat project by running:
+
+```
+npx hardhat init
+```
+
+## Usage
+
+### Quickstart
+
+To dive into account abstraction using Scaffold-ETH 2, follow the instructions below:
+
+1. **Clone this repo & install dependencies**
 
 ```
 git clone https://github.com/scaffold-eth/scaffold-eth-2.git
@@ -37,44 +52,59 @@ cd scaffold-eth-2
 yarn install
 ```
 
-2. Run a local network in the first terminal:
+
+2. **Run a local network in the first terminal:**
 
 ```
 yarn chain
 ```
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
 
-3. On a second terminal, deploy the test contract:
+This command starts a local Ethereum network using Hardhat. It runs on your local machine for testing and development. Customize the network configuration in `hardhat.config.ts`.
+
+3. **Deploy the test contract in a second terminal:**
 
 ```
 yarn deploy
 ```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
 
-4. On a third terminal, start your NextJS app:
+This deploys a test smart contract to the local network, located in `packages/hardhat/contracts`. Modify it as needed. The deploy script in `packages/hardhat/deploy` is used for deployment. Customize this script to your liking.
+
+4. **Start your NextJS app in a third terminal:**
 
 ```
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
 
-Run smart contract test with `yarn hardhat:test`
+Visit your app at http://localhost:3000. Interact with your smart contract using the Debug Contracts page. Tweak the app config in `packages/nextjs/scaffold.config.ts`.
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend in `packages/nextjs/pages`
-- Edit your deployment scripts in `packages/hardhat/deploy`
+5. **Run smart contract tests with:**
 
-## Documentation
+```
+yarn hardhat:test
+```
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+- **Edit your smart contract** `YourContract.sol` in `packages/hardhat/contracts`
+- **Edit your frontend** in `packages/nextjs/pages`
+- **Edit your deployment scripts** in `packages/hardhat/deploy`
 
-## Contributing to Scaffold-ETH 2
+## Contributing
 
-We welcome contributions to Scaffold-ETH 2!
+We welcome contributions to our project. If you are interested in contributing, please read our contributing guidelines that you can find in the `CONTRIBUTING.md` file. If it doesn't exist yet, please feel free to open an issue or pull request with your suggestions.
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any queries regarding this project, please feel free to contact us.
+
+## Acknowledgments
+
+- Vitalik Buterin and the Ethereum Foundation for their visionary work and contributions to the Ethereum ecosystem.
+- The Ethereum community for continuously pushing the boundaries of blockchain technology.
+- Encode Club for an amazing bootcamp experience
