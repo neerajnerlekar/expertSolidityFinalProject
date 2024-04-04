@@ -2,10 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { Address, Balance } from "./scaffold-eth";
+import { ethers } from "ethers";
 import { formatEther } from "viem";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
-// const EP_ADDR = "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789";
+// import { useSignMessage } from "wagmi";
+
+const EP_ADDR = "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789";
 // const FACTORY_ADDRESS = "0xbC99415C93b48521E2651ee9eF175dEde499B694";
 const PM_ADDR = "0xb2A25a5245419Bbb39627374CaF23F1B7a4637Fc";
 const SMART_ACCOUNT_ADDR = "0x032b9ca48062ddb0c1614b82ebc8a9bd7f136eba";
@@ -21,7 +24,51 @@ const DisplaySmartAccount = () => {
   });
 
   const handleClick = async () => {
-    console.log("clicked");
+    const provider = new ethers.AlchemyProvider("base-sepolia", process.env.NEXT_PUBLIC_ALCHEMY_API_KEY);
+    // const { signMessage } = useSignMessage();
+
+    const entryPoint = new ethers.Contract(EP_ADDR, ["EntryPoint"], provider);
+
+    // const AccountFactory = new ethers.Contract(FACTORY_ADDRESS, ["AccountFactory"], provider);
+
+    const sender = SMART_ACCOUNT_ADDR;
+
+    const Account = new ethers.Contract(SMART_ACCOUNT_ADDR, ["Account"], provider);
+
+    const userOp = {
+      sender,
+      nonce: "0x" + (await entryPoint.getNonce(sender, 0)).toString(16),
+      initCode: "0x",
+      callData: Account.interface.encodeFunctionData("execute"),
+      paymasterAndData: PM_ADDR,
+      signature:
+        "0xfffffffffffffffffffffffffffffff0000000000000000000000000000000007aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1c",
+    };
+
+    const { preVerificationGas, verificationGasLimit, callGasLimit } = await entryPoint.send(
+      "eth_estimateUserOperationGas",
+      [userOp, EP_ADDR],
+    );
+    console.log({ preVerificationGas, verificationGasLimit, callGasLimit });
+
+    (userOp as any).preVerificationGas = preVerificationGas;
+    (userOp as any).verificationGasLimit = verificationGasLimit;
+    (userOp as any).callGasLimit = callGasLimit;
+
+    const { maxFeePerGas } = await provider.getFeeData();
+    if (maxFeePerGas !== null) {
+      (userOp as any).maxFeePerGas = "0x" + maxFeePerGas.toString(16);
+    }
+
+    const maxPriorityFeePerGas = await provider.send("rundler_maxPriorityFeePerGas", {});
+    (userOp as any).maxPriorityFeePerGas = maxPriorityFeePerGas;
+
+    // const userOpHash = await entryPoint.getUserOpHash(userOp);
+    // userOp.signature = await signMessage(userOpHash) as unknown as string;
+
+    //sending the userOp to the bundler
+    const opHash = await provider.send("eth_sendUserOperation", [userOp, EP_ADDR]);
+    console.log({ opHash });
   };
 
   const getCount = async () => {

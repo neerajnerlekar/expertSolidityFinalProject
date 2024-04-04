@@ -23,7 +23,7 @@ const Home: NextPage = () => {
                 <Address address={connectedAddress} />
               </div>
             ) : (
-              "Login to connect to your hacker"
+              "Login to connect to your dashboard"
             )}
           </div>
         </div>
