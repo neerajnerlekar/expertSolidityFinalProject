@@ -16,6 +16,7 @@ const FACTORY_ADDRESS = "0xbC99415C93b48521E2651ee9eF175dEde499B694";
 const PM_ADDR = "0xb2A25a5245419Bbb39627374CaF23F1B7a4637Fc";
 // previous paymaster address
 // const PM_ADDR = "0x4c091eF65F5b5b16f64655D528af7CCd8F4FF8c0";
+const SMART_ACCOUNT_ADDR = "0x032b9ca48062ddb0c1614b82ebc8a9bd7f136eba";
 
 async function main() {
   const entryPoint = await hre.ethers.getContractAt("EntryPoint", EP_ADDR);
@@ -53,7 +54,7 @@ async function main() {
 
   console.log({ sender });
 
-  const Account = await hre.ethers.getContractFactory("YourContract");
+  const Account = await hre.ethers.getContractAt("YourContract", "0x032b9ca48062ddb0c1614b82ebc8a9bd7f136eba", sender);
 
   const userOp = {
     sender,

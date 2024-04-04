@@ -15,11 +15,11 @@ async function main() {
   //   console.log("Code at the address is", code);
 
   // check balances
-  console.log("smart account balance", await hre.ethers.provider.getBalance(SMART_ACCOUNT_ADDR));
+  console.log(`smart account balance of ${SMART_ACCOUNT_ADDR}`, await hre.ethers.provider.getBalance(SMART_ACCOUNT_ADDR));
 
   const epContract = await hre.ethers.getContractAt("EntryPoint", EP_ADDR);
   console.log("smart account balance on EntryPoint Contract", await epContract.balanceOf(SMART_ACCOUNT_ADDR));
-  console.log("Paymaster balance on EntryPoint Contract", await epContract.balanceOf(PM_ADDR));
+  console.log(`Paymaster balance of account ${PM_ADDR} on EntryPoint Contract`, await epContract.balanceOf(PM_ADDR));
 }
 
 main()

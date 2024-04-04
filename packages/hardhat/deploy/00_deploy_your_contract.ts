@@ -45,11 +45,11 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     log: true,
   });
 
-  await deploy("EntryPoint", {
-    from: deployer,
-    args: [],
-    log: true,
-  });
+  // await deploy("EntryPoint", {
+  //   from: deployer,
+  //   args: [],
+  //   log: true,
+  // });
 
   // // Get the deployed contract to interact with it after deploying.
   // const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
